@@ -9,10 +9,12 @@ app.use(cors({
 }));
 
 app.post('/login', (req, res) => {
+    console.log('POST /login');
     res.redirect(302, '/logged-in');
 });
 
 app.get('/logged-in', (req, res) => {
+    console.log('GET /logged-in');
     res.json({
         status: 'logged in'
     });
